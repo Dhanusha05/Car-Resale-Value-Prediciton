@@ -1,0 +1,52 @@
+/* ═══════════════════════════════════
+   TOKENS
+═══════════════════════════════════ */
+:root {
+  --bg0:  #05070d;
+  --bg1:  #090d14;
+  --bg2:  #0d1219;
+  --bg3:  #111620;
+  --line: #1a2235;
+  --line2:#222e43;
+  --c0:   #e8f0fc;
+  --c1:   #9baec8;
+  --c2:   #4d6480;
+  --c3:   #2d3e55;
+  --a:    #4f9eff;
+  --a-gl: rgba(79,158,255,0.18);
+  --a-d:  rgba(79,158,255,0.07);
+  --g:    #23e8a0;
+  --g-d:  rgba(35,232,160,0.07);
+  --r:    #ff5068;
+  --r-d:  rgba(255,80,104,0.07);
+  --y:    #ffcb47;
+  --p:    #c17dff;
+}
+
+/* ═══════════════════════════════════
+   RESET & BASE
+═══════════════════════════════════ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html, body, #root { height: 100%; overflow: hidden; }
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background: var(--bg0);
+  color: var(--c0);
+}
+
+/* Grid overlay */
+body::after {
+  content: '';
+  position: fixed; inset: 0;
+  background:
+    repeating-linear-gradient(0deg, transparent, transparent 59px, var(--line) 59px, var(--line) 60px),
+    repeating-linear-gradient(90deg, transparent, transparent 59px, var(--line) 59px, var(--line) 60px);
+  opacity: 0.28;
+  pointer-events: none;
+  z-index: 0;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--line2); border-radius: 4px; }
